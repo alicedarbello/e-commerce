@@ -1,0 +1,158 @@
+interface Mobile {
+  id: number;
+  name: string;
+  price: number;
+  currency: string;
+  onSale: boolean;
+  image: string;
+  shortDescription: string;
+}
+
+const mobiles: Mobile[] = [
+  {
+    id: 1,
+    name: "iPhone 13 Pro - Transparent",
+    price: 499,
+    currency: "LKR",
+    onSale: true,
+    image: "/mobile-photos/id_1.png",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    id: 2,
+    name: "Samsung S23+ - Transparent",
+    price: 799,
+    currency: "LKR",
+    onSale: false,
+    image: "/mobile-photos/id_2.png",
+    shortDescription: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    id: 3,
+    name: "iPhone 14 - Transparent with magsafe",
+    price: 799,
+    currency: "LKR",
+    onSale: true,
+    image: "/mobile-photos/id_3.png",
+    shortDescription: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+  },
+  {
+    id: 4,
+    name: "Pixel 7 Pro - Transparent Wireless",
+    price: 599,
+    currency: "LKR",
+    onSale: true,
+    image: "/mobile-photos/id_4.png",
+    shortDescription: "Nisi ut aliquip ex ea commodo consequat.",
+  },
+  {
+    id: 5,
+    name: "Pixel 6a - Matte Black",
+    price: 499,
+    currency: "LKR",
+    onSale: false,
+    image: "/mobile-photos/id_5.png",
+    shortDescription: "Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+  },
+  {
+    id: 6,
+    name: "Pixel 6a",
+    price: 399,
+    currency: "LKR",
+    onSale: true,
+    image: "/mobile-photos/id_6.png",
+    shortDescription: "Cillum dolore eu fugiat nulla pariatur.",
+  },
+  {
+    id: 7,
+    name: "iPhone 14 - Transparent with magsafe",
+    price: 799,
+    currency: "LKR",
+    onSale: true,
+    image: "/mobile-photos/id_7.png",
+    shortDescription: "Excepteur sint occaecat cupidatat non proident.",
+  },
+  {
+    id: 8,
+    name: "Pixel 7 Pro - Transparent Wireless",
+    price: 599,
+    currency: "LKR",
+    onSale: false,
+    image: "/mobile-photos/id_8.png",
+    shortDescription: "Sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  },
+  {
+    id: 9,
+    name: "iPhone 13 Pro - Transparent",
+    price: 499,
+    currency: "LKR",
+    onSale: false,
+    image: "/mobile-photos/id_9.png",
+    shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    id: 10,
+    name: "Samsung S23+ - Transparent",
+    price: 799,
+    currency: "LKR",
+    onSale: true,
+    image: "/mobile-photos/id_10.png",
+    shortDescription: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    id: 11,
+    name: "Pixel 6a - Transparent",
+    price: 599,
+    currency: "LKR",
+    onSale: false,
+    image: "/mobile-photos/id_11.png",
+    shortDescription: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+  },
+  {
+    id: 12,
+    name: "Pixel 7 Pro - Transparent Wireless",
+    price: 599,
+    currency: "LKR",
+    onSale: false,
+    image: "/mobile-photos/id_12.png",
+    shortDescription: "Nisi ut aliquip ex ea commodo consequat.",
+  },
+  {
+    id: 13,
+    name: "iPhone 13 Pro - Transparent",
+    price: 499,
+    currency: "LKR",
+    onSale: true,
+    image: "/mobile-photos/id_13.png",
+    shortDescription: "Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+  },
+  {
+    id: 14,
+    name: "Samsung S23+ - Transparent",
+    price: 799,
+    currency: "LKR",
+    onSale: false,
+    image: "/mobile-photos/id_14.png",
+    shortDescription: "Cillum dolore eu fugiat nulla pariatur.",
+  },
+  {
+    id: 15,
+    name: "iPhone 14 - Transparent with magsafe",
+    price: 799,
+    currency: "LKR",
+    onSale: false,
+    image: "/mobile-photos/id_15.png",
+    shortDescription: "Excepteur sint occaecat cupidatat non proident.",
+  },
+  {
+    id: 16,
+    name: "Pixel 7 Pro - Transparent Wireless",
+    price: 599,
+    currency: "LKR",
+    onSale: false,
+    image: "/mobile-photos/id_16.png",
+    shortDescription: "Sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  },
+];
+
+export {mobiles};
