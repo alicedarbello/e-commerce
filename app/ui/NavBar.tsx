@@ -1,33 +1,38 @@
+import Image from "next/image";
+import Link from "next/link";
+
 import Search from "./Search";
 
 export default function NavBar() {
   return (
-    <div className="mb-4 grid grid-cols-3 gap-10 p-4">
+    <div className="my-6 grid grid-cols-3 gap-10 p-4">
       <ul className="flex justify-center gap-10">
         <li>
-          <a className="hover:underline" href="/">
+          <Link className="hover:underline" href="/">
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a className="hover:underline" href="/products">
+          <Link className="hover:underline" href="/products">
             All Products
-          </a>
+          </Link>
         </li>
         <li>
-          <a className="hover:underline" href="/blog">
+          <Link className="hover:underline" href="/blog">
             Blog
-          </a>
+          </Link>
         </li>
       </ul>
       <ul className="flex justify-center">
-        <li className="font-bold text-red-600">MOCOM - mobile shop</li>
+        <li>
+          <Image alt="Logo" height={64} src="/mocom-icon.png" width={200} />
+        </li>
       </ul>
       <ul className="flex justify-center gap-10">
         <li>
-          <a className="hover:underline" href="/blog">
+          <Link className="hover:underline" href="/about">
             About Us
-          </a>
+          </Link>
         </li>
         <Search />
       </ul>
