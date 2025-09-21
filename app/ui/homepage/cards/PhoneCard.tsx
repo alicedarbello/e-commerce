@@ -1,0 +1,15 @@
+export function PhoneCard({children, className}: {children: React.ReactNode; className: string}) {
+  return <div className={className}>{children}</div>;
+}
+
+export function OnSaleChip() {
+  return (
+    <div className="absolute top-3 left-3 rounded-full bg-gray-300 px-3 py-1 text-sm shadow-xl/30">
+      sale !
+    </div>
+  );
+}
+
+export function CardImage({children}: {children: React.ReactNode}) {
+  return <div className="flex h-full w-full items-center justify-center">{children}</div>;
+}
