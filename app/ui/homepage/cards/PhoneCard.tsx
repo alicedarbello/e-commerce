@@ -1,4 +1,4 @@
-export function PhoneCard({children, className}: {children: React.ReactNode; className: string}) {
+export function PhoneCard({children, className}: {children: React.ReactNode; className?: string}) {
   return <div className={className}>{children}</div>;
 }
 
@@ -11,5 +11,5 @@ export function OnSaleChip() {
 }
 
 export function CardImage({children}: {children: React.ReactNode}) {
-  return <div className="flex h-full w-full items-center justify-center">{children}</div>;
+  return <div className="flex items-center justify-center rounded-xl bg-gray-200">{children}</div>;
 }
