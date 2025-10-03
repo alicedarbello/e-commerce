@@ -6,7 +6,7 @@ import {CardImage, PhoneCard} from "../ui/homepage/cards/PhoneCard";
 
 export default function Page() {
   return (
-    <div className="mb-20">
+    <div className="my-20">
       <h1 className={`${interBold.className} mb-20 text-4xl`}>Shop All Products</h1>
       <div className="flex flex-wrap justify-between gap-8">
         {mobiles.map((mobile) => (
