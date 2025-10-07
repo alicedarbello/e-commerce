@@ -31,8 +31,8 @@ export async function fetchAllAccessories(
   return fetch(query).then((res) => res.json()) as unknown as Promise<ResponseAccessories>;
 }
 
-export async function fetchAccessoryById(id: string) {
-  return fetch(`https://mocom-api.vercel.app/accessories/${id}`).then((res) =>
+export async function fetchAccessoryById(productId: string) {
+  return fetch(`https://mocom-api.vercel.app/accessories/${productId}`).then((res) =>
     res.json(),
   ) as unknown as Promise<Accessories>;
 }

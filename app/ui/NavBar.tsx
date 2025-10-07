@@ -19,8 +19,8 @@ export default function NavBar() {
         </li>
         <li>
           <Link
-            className={`hover:underline ${pathname === "/products" ? "text-red-500" : null}`}
-            href="/products"
+            className={`hover:underline ${pathname === "/accessories" ? "text-red-500" : null}`}
+            href="/accessories"
           >
             Shop All
           </Link>

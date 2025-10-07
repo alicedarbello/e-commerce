@@ -47,9 +47,9 @@ export default function OnSaleCards() {
                   <Image
                     alt="Iphone 13 - Transparent"
                     className="mx-10 my-15"
-                    height="309"
+                    height={309}
                     src={`https://mocom-api.vercel.app${mobile.image_uri}`}
-                    width="306"
+                    width={306}
                   />
                 </CardImage>
               </div>

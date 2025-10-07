@@ -11,5 +11,5 @@ export function OnSaleChip() {
 }
 
 export function CardImage({children}: {children: React.ReactNode}) {
-  return <div className="flex items-center justify-center rounded-xl bg-gray-200">{children}</div>;
+  return <div className="flex items-center justify-center rounded-2xl bg-gray-200">{children}</div>;
 }
