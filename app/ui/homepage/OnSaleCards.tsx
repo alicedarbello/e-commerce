@@ -2,14 +2,23 @@
 
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay, {type AutoplayType} from "embla-carousel-autoplay";
-import {useRef} from "react";
+import {useEffect, useRef, useState} from "react";
 import Image from "next/image";
 
 import {CardImage, OnSaleChip, PhoneCard} from "./cards/PhoneCard";
 
-import {mobiles} from "@/app/lib/placeholder-data";
+import {fetchAllAccessories} from "@/app/services/accessories";
+import {Accessories} from "@/app/types";
 
 export default function OnSaleCards() {
+  const [onSale, setOnSale] = useState<Accessories[]>([]);
+
+  useEffect(() => {
+    fetchAllAccessories({onSale: true}).then((res) => {
+      setOnSale(res.data);
+    });
+  }, []);
+
   const autoplay = useRef<AutoplayType>(Autoplay({delay: 2000, stopOnInteraction: false}));
   const [emblaRef] = useEmblaCarousel(
     {
@@ -30,26 +39,26 @@ export default function OnSaleCards() {
     >
       <div ref={emblaRef} className="embla__viewport">
         <div className="embla__container">
-          {mobiles
-            .filter((m) => m.onSale)
-            .map((mobile) => (
-              <PhoneCard key={mobile.id} className="embla__slide">
-                <div className="relative">
-                  <OnSaleChip />
-                  <CardImage>
-                    <Image
-                      alt="Iphone 13 - Transparent"
-                      className="mx-10 my-15"
-                      height="309"
-                      src={mobile.image}
-                      width="306"
-                    />
-                  </CardImage>
-                </div>
-                <p>{mobile.name}</p>
-                <p>LKR {mobile.price}</p>
-              </PhoneCard>
-            ))}
+          {onSale.map((mobile) => (
+            <PhoneCard key={mobile.id} className="embla__slide">
+              <div className="relative">
+                <OnSaleChip />
+                <CardImage>
+                  <Image
+                    alt="Iphone 13 - Transparent"
+                    className="mx-10 my-15"
+                    height="309"
+                    src={`https://mocom-api.vercel.app${mobile.image_uri}`}
+                    width="306"
+                  />
+                </CardImage>
+              </div>
+              <p>
+                {mobile.phone_model} - {mobile.name}
+              </p>
+              <p>LKR {mobile.price}</p>
+            </PhoneCard>
+          ))}
         </div>
       </div>
     </div>
