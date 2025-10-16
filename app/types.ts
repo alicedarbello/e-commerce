@@ -8,3 +8,8 @@ export interface Accessories {
   image_uri: string;
   description: string;
 }
+
+export interface AccessoryContextType {
+  accessories: Accessories[] | null;
+  setAccessories: (accessories: Accessories[]) => void;
+}

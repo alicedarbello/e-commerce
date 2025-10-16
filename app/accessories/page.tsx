@@ -29,7 +29,7 @@ export default function Page() {
                   alt={mobile.name}
                   className="m-10"
                   height={220}
-                  src={`https://mocom-api.vercel.app${mobile.image_uri}`}
+                  src={`http://127.0.0.1:8000${mobile.image_uri}`}
                   width={220}
                 />
               </CardImage>

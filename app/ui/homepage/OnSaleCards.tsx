@@ -4,6 +4,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay, {type AutoplayType} from "embla-carousel-autoplay";
 import {useEffect, useRef, useState} from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import {CardImage, OnSaleChip, PhoneCard} from "./cards/PhoneCard";
 
@@ -41,22 +42,24 @@ export default function OnSaleCards() {
         <div className="embla__container">
           {onSale.map((mobile) => (
             <PhoneCard key={mobile.id} className="embla__slide">
-              <div className="relative">
-                <OnSaleChip />
-                <CardImage>
-                  <Image
-                    alt="Iphone 13 - Transparent"
-                    className="mx-10 my-15"
-                    height={309}
-                    src={`https://mocom-api.vercel.app${mobile.image_uri}`}
-                    width={306}
-                  />
-                </CardImage>
-              </div>
-              <p>
-                {mobile.phone_model} - {mobile.name}
-              </p>
-              <p>LKR {mobile.price}</p>
+              <Link href={`/accessories/${mobile.id}`}>
+                <div className="relative">
+                  <OnSaleChip />
+                  <CardImage>
+                    <Image
+                      alt="Iphone 13 - Transparent"
+                      className="mx-10 my-15"
+                      height={309}
+                      src={`http://127.0.0.1:8000${mobile.image_uri}`}
+                      width={306}
+                    />
+                  </CardImage>
+                </div>
+                <p>
+                  {mobile.phone_model} - {mobile.name}
+                </p>
+                <p>LKR {mobile.price}</p>
+              </Link>
             </PhoneCard>
           ))}
         </div>

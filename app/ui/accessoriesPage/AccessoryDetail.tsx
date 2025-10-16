@@ -20,6 +20,10 @@ export default function AccessoryDetail() {
     });
   }, [productId]);
 
+  if (!accessory) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className="mx-10 my-20">
       <h1 className={`${interBold.className} mb-15 text-4xl`}>Shop Item</h1>
@@ -27,17 +31,17 @@ export default function AccessoryDetail() {
         <div className="w-fit">
           <CardImage>
             <Image
-              alt={accessory?.name || "Accessory Image"}
+              alt={accessory.name || "Accessory Image"}
               className="m-10"
               height={400}
-              src={`https://mocom-api.vercel.app${accessory?.image_uri}`}
+              src={`http://127.0.0.1:8000${accessory.image_uri}`}
               width={400}
             />
           </CardImage>
         </div>
         <div>
           <h2 className={`${interRegular.className} mb-6 text-2xl font-semibold`}>
-            {accessory?.phone_model} - {accessory?.name}
+            {accessory.phone_model} - {accessory.name}
           </h2>
           <p className="mb-6">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, esse. Esse fugit
