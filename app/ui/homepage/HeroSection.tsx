@@ -18,10 +18,10 @@ export default function HeroSection() {
       <div className="flex justify-center">
         <Image
           alt="Iphone Case"
-          height="544"
+          height={544}
           src="/firstSectionImage.png"
           style={{width: "auto", height: "auto"}}
-          width="518"
+          width={518}
         />
       </div>
     </div>
