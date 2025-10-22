@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import {useEffect, useState} from "react";
+import {use, useEffect, useState} from "react";
 import Link from "next/link";
 
 import {interBold} from "../ui/fonts";
@@ -8,14 +8,19 @@ import {CardImage, PhoneCard} from "../ui/homepage/cards/PhoneCard";
 import {fetchAllAccessories} from "../services/accessories";
 import {Accessories} from "../types";
 
-export default function Page() {
+export default function Page({
+  searchParams,
+}: {
+  searchParams: Promise<{[key: string]: string | undefined}>;
+}) {
+  const q = use(searchParams).q;
   const [allProducts, setAllProducts] = useState<Accessories[]>([]);
 
   useEffect(() => {
-    fetchAllAccessories().then((res) => {
+    fetchAllAccessories({q}).then((res) => {
       setAllProducts(res.data);
     });
-  }, []);
+  }, [q]);
 
   return (
     <div className="my-20">
