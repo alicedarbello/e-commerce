@@ -1,7 +1,7 @@
 import Image from "next/image";
 // import {useEffect, useState} from "react";
 
-import {CardImage, PhoneCard} from "../homepage/cards/PhoneCard";
+import {CardImage, PhoneCard} from "../../shared/PhoneCard";
 
 // import {fetchAllAccessories} from "@/app/services/accessories";
 // import {Accessories} from "@/app/types";

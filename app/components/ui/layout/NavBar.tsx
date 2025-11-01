@@ -4,13 +4,16 @@ import Image from "next/image";
 import Link from "next/link";
 import {usePathname} from "next/navigation";
 
-import Search from "./Search";
+import Search from "../../pages/homepage/nav-bar/Search";
+import Favorites from "../../pages/homepage/nav-bar/Favorites";
+import ShoppingCart from "../../pages/homepage/nav-bar/ShoppingCart";
+import Profile from "../../pages/homepage/nav-bar/Profile";
 
 export default function NavBar() {
   const pathname = usePathname();
 
   return (
-    <div className="grid grid-cols-3 gap-10 pt-10">
+    <div className="grid grid-cols-3 pt-10">
       <ul className="flex place-content-between items-center">
         <li>
           <Link className={`hover:underline ${pathname === "/" ? "text-red-500" : null}`} href="/">
@@ -27,10 +30,10 @@ export default function NavBar() {
         </li>
         <li>
           <Link
-            className={`hover:underline ${pathname === "/blog" ? "text-red-500" : null}`}
-            href="/blog"
+            className={`hover:underline ${pathname === "/about" ? "text-red-500" : null}`}
+            href="/about"
           >
-            Blog
+            About Us
           </Link>
         </li>
       </ul>
@@ -39,16 +42,19 @@ export default function NavBar() {
           <Image alt="Logo" height={64} src="/mocom-icon.png" width={200} />
         </li>
       </ul>
-      <ul className="flex items-center justify-center gap-15">
+      <ul className="flex place-content-between items-center">
         <li>
-          <Link
-            className={`hover:underline ${pathname === "/about" ? "text-red-500" : null}`}
-            href="/about"
-          >
-            About Us
-          </Link>
+          <Search />
         </li>
-        <Search />
+        <li>
+          <Favorites />
+        </li>
+        <li>
+          <ShoppingCart />
+        </li>
+        <li>
+          <Profile />
+        </li>
       </ul>
     </div>
   );

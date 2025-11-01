@@ -1,8 +1,8 @@
-import WhyChooseUs from "./ui/homepage/WhyChooseUs";
-import HeroSection from "./ui/homepage/HeroSection";
-import TemperedGlassCard from "./ui/homepage/TemperedGlassCard";
-import OnSaleCards from "./ui/homepage/OnSaleCards";
-import AboutSection from "./ui/homepage/AboutSection";
+import AboutSection from "./components/pages/homepage/AboutSection";
+import HeroSection from "./components/pages/homepage/HeroSection";
+import OnSaleCards from "./components/pages/homepage/OnSaleCards";
+import TemperedGlassCard from "./components/pages/homepage/TemperedGlassCard";
+import WhyChooseUs from "./components/pages/homepage/WhyChooseUs";
 
 export default function Page() {
   return (

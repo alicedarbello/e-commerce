@@ -1,9 +1,9 @@
 import type {Metadata} from "next";
 import "./globals.css";
 
-import {interRegular} from "./ui/fonts";
-import Footer from "./ui/Footer";
-import NavBar from "./ui/NavBar";
+import {interRegular} from "./components/styles/fonts";
+import Footer from "./components/ui/layout/Footer";
+import NavBar from "./components/ui/layout/NavBar";
 
 export const metadata: Metadata = {
   title: "MOCOM - Mobile Phone Accessories",
@@ -44,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${interRegular.className} flex min-h-screen flex-col justify-between antialiased`}
+        className={`${interRegular.className} m-0 flex h-full flex-col justify-between antialiased`}
       >
         <div className="mx-64">
           <NavBar />
