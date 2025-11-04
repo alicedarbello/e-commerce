@@ -23,3 +23,13 @@
   padding-left: var(--slide-spacing);
   position: relative;
 } 
+
+.selection_hover {
+  p {
+    transition: all 0.3s ease;
+  }
+
+  &:hover p {
+    color: red;
+  }
+}

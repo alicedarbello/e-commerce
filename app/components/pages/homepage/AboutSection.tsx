@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import {lalezar} from "../fonts";
+import {lalezar} from "../../styles/fonts";
 
 export default function AboutSection() {
   return (

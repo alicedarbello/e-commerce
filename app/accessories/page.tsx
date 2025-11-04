@@ -3,8 +3,8 @@ import Image from "next/image";
 import {use, useEffect, useState} from "react";
 import Link from "next/link";
 
-import {interBold} from "../ui/fonts";
-import {CardImage, PhoneCard} from "../ui/homepage/cards/PhoneCard";
+import {interBold} from "../components/styles/fonts";
+import {CardImage, PhoneCard} from "../components/shared/PhoneCard";
 import {fetchAllAccessories} from "../services/accessories";
 import {Accessories} from "../types";
 
@@ -25,10 +25,11 @@ export default function Page({
   return (
     <div className="my-20">
       <h1 className={`${interBold.className} mb-20 text-4xl`}>Shop All Products</h1>
+      <dialog>Hello World</dialog>
       <div className="flex flex-wrap justify-between gap-8">
         {allProducts.map((mobile) => (
           <Link key={mobile.id} href={`/accessories/${mobile.id}`}>
-            <PhoneCard key={mobile.id}>
+            <PhoneCard key={mobile.id} className="selection_hover">
               <CardImage>
                 <Image
                   alt={mobile.name}

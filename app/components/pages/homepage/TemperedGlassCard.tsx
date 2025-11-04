@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import {lalezar, interBold} from "../fonts";
+import {lalezar, interBold} from "../../styles/fonts";
 
 export default function TemperedGlassCard() {
   return (

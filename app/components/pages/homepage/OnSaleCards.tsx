@@ -6,7 +6,7 @@ import {useEffect, useRef, useState} from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import {CardImage, OnSaleChip, PhoneCard} from "./cards/PhoneCard";
+import {CardImage, OnSaleChip, PhoneCard} from "../../shared/PhoneCard";
 
 import {fetchAllAccessories} from "@/app/services/accessories";
 import {Accessories} from "@/app/types";
@@ -41,7 +41,7 @@ export default function OnSaleCards() {
       <div ref={emblaRef} className="embla__viewport">
         <div className="embla__container">
           {onSale.map((mobile) => (
-            <PhoneCard key={mobile.id} className="embla__slide">
+            <PhoneCard key={mobile.id} className="embla__slide selection_hover">
               <Link href={`/accessories/${mobile.id}`}>
                 <div className="relative">
                   <OnSaleChip />

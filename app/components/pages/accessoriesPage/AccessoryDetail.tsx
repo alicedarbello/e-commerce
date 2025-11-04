@@ -3,8 +3,8 @@ import {useEffect, useState} from "react";
 import {useParams} from "next/navigation";
 import Image from "next/image";
 
-import {interBold, interRegular} from "../fonts";
-import {CardImage} from "../homepage/cards/PhoneCard";
+import {interBold, interRegular} from "../../styles/fonts";
+import {CardImage} from "../../shared/PhoneCard";
 
 import {Accessories} from "@/app/types";
 import {fetchAccessoryById} from "@/app/services/accessories";
