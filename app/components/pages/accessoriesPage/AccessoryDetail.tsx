@@ -1,24 +1,12 @@
-"use client";
-import {useEffect, useState} from "react";
-import {useParams} from "next/navigation";
 import Image from "next/image";
 
 import {interBold, interRegular} from "../../styles/fonts";
 import {CardImage} from "../../shared/PhoneCard";
 
-import {Accessories} from "@/app/types";
 import {fetchAccessoryById} from "@/app/services/accessories";
 
-export default function AccessoryDetail() {
-  const {productId} = useParams<{productId: string}>();
-
-  const [accessory, setAccessory] = useState<Accessories>();
-
-  useEffect(() => {
-    fetchAccessoryById(productId).then((res) => {
-      setAccessory(res);
-    });
-  }, [productId]);
+export default async function AccessoryDetail({productId}: {productId: string}) {
+  const accessory = await fetchAccessoryById(productId);
 
   if (!accessory) {
     return <div>Loading...</div>;

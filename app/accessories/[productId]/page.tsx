@@ -1,11 +1,12 @@
 import AccessoryDetail from "@/app/components/pages/accessoriesPage/AccessoryDetail";
 import OnSaleCards from "@/app/components/pages/homepage/OnSaleCards";
-// import SimilarProducts from "@/app/ui/accessoriesPage/SimilarProducts";
 
-export default function AccessoryPage() {
+export default async function AccessoryPage({params}: {params: Promise<{productId: string}>}) {
+  const {productId} = await params;
+
   return (
     <div>
-      <AccessoryDetail />
+      <AccessoryDetail productId={productId} />
       <OnSaleCards />
     </div>
   );
