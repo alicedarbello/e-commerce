@@ -50,7 +50,7 @@ export default function OnSaleCards() {
                       alt="Iphone 13 - Transparent"
                       className="mx-10 my-15"
                       height={309}
-                      src={`http://127.0.0.1:8000${mobile.image_uri}`}
+                      src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${mobile.image_uri}`}
                       width={306}
                     />
                   </CardImage>

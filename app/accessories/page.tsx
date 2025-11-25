@@ -37,7 +37,7 @@ async function SuspensedPage({q}: {q: string | undefined}) {
                 alt={mobile.name}
                 className="m-10"
                 height={220}
-                src={`http://127.0.0.1:8000${mobile.image_uri}`}
+                src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${mobile.image_uri}`}
                 width={220}
               />
             </CardImage>
