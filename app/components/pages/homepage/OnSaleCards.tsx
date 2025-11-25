@@ -51,6 +51,7 @@ export default function OnSaleCards() {
                       className="mx-10 my-15"
                       height={309}
                       src={`http://127.0.0.1:8000${mobile.image_uri}`}
+                      style={{width: "auto", height: "auto"}}
                       width={306}
                     />
                   </CardImage>

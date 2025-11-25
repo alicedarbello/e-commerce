@@ -31,8 +31,12 @@ export async function fetchAllAccessories(
   return fetch(query).then((res) => res.json()) as unknown as Promise<ResponseAccessories>;
 }
 
-export async function fetchAccessoryById(productId: string) {
-  return fetch(`http://127.0.0.1:8000/accessories/${productId}`).then((res) =>
-    res.json(),
-  ) as unknown as Promise<Accessories>;
+export async function fetchAccessoryById(productId: number) {
+  return fetch(`http://127.0.0.1:8000/accessories/${productId}`).then((res) => {
+    if (res.status === 404) {
+      return null;
+    }
+
+    return res.json();
+  }) as unknown as Promise<Accessories | null>;
 }
