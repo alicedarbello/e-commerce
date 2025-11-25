@@ -16,7 +16,7 @@ export async function fetchAllAccessories(
 ) {
   const {q, maxPrice, onSale, page = 1, limit = 20} = params;
 
-  let query = `http://127.0.0.1:8000/accessories?page=${page}&limit=${limit}`;
+  let query = `${process.env.NEXT_PUBLIC_BACKEND_URL}/accessories?page=${page}&limit=${limit}`;
 
   if (q) {
     query += `&q=${q}`;
@@ -32,7 +32,7 @@ export async function fetchAllAccessories(
 }
 
 export async function fetchAccessoryById(productId: string) {
-  return fetch(`http://127.0.0.1:8000/accessories/${productId}`).then((res) =>
+  return fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/accessories/${productId}`).then((res) =>
     res.json(),
   ) as unknown as Promise<Accessories>;
 }
