@@ -4,24 +4,29 @@ import {interRegular} from "../../styles/fonts";
 import {CardImage} from "../../shared/PhoneCard";
 
 import {fetchAccessoryById} from "@/app/services/accessories";
+import NotFound from "@/app/not-found";
 
-export default async function AccessoryDetail({productId}: {productId: string}) {
+export default async function AccessoryDetail({productId}: {productId: number}) {
   const accessory = await fetchAccessoryById(productId);
 
+  if (!accessory) {
+    return <NotFound accessoryNotFound="Accessory" />;
+  }
+
   return (
-    <div className="mx-15 mr-30 grid grid-cols-2">
+    <div className="grid grid-cols-3">
       <div className="w-fit">
         <CardImage>
           <Image
             alt={accessory.name || "Accessory Image"}
-            className="m-10"
+            className="p-10"
             height={400}
             src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${accessory.image_uri}`}
             width={400}
           />
         </CardImage>
       </div>
-      <div>
+      <div className="col-span-2 ml-10">
         <h2 className={`${interRegular.className} mb-6 text-2xl font-semibold`}>
           {accessory.phone_model} - {accessory.name}
         </h2>
