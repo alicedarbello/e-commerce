@@ -21,7 +21,7 @@ export default async function AccessoryDetail({productId}: {productId: number}) 
             alt={accessory.name || "Accessory Image"}
             className="p-10"
             height={400}
-            src={`http://127.0.0.1:8000${accessory.image_uri}`}
+            src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${accessory.image_uri}`}
             width={400}
           />
         </CardImage>
