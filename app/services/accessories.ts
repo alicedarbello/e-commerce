@@ -39,3 +39,4 @@ export async function fetchAccessoryById(productId: number) {
 
     return res.json();
   }) as unknown as Promise<Accessories | null>;
+}
