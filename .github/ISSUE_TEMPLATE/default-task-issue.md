@@ -2,8 +2,8 @@
 name: Default Task Issue
 about: Use this template to get an idea of what should include a Task Issue
 title: 'Feat/Fix: Implementar...'
-labels: task
-assignees: ''
+labels: feature, task
+assignees: alicedarbello
 
 ---
 
